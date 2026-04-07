@@ -1,0 +1,19 @@
+# Applications Tracker
+
+| # | Date | Company | Role | Score | Status | PDF | Report | Notes |
+|---|------|---------|------|-------|--------|-----|--------|-------|
+| 18 | 2026-04-06 | Joist AI | Full Stack Engineer | 2.0/5 | Discarded | ❌ | [015](reports/015-joist-ai-2026-04-06.md) | Offer closed; all current openings India-only. Degree required. |
+| 17 | 2026-04-06 | Lorikeet | Solutions Architect | 3.8/5 | Evaluada | ❌ | [014](reports/014-lorikeet-2026-04-06.md) | SA/FDE at AI customer support startup ($200M valuation). Strong archetype match. Remote US. $120K-160K est. Apply with AI Developer resume track. |
+| 12 | 2026-04-06 | Shield AI | Platform Software Engineer | 2.3/5 | NO APLICAR | ❌ | [009](reports/009-shield-ai-2026-04-06.md) | Hard blockers: no Golang, 8-15yr SW eng required. Explore their AV test/integration roles instead. |
+| 13 | 2026-04-06 | MeridianLink | Sr. Full-Stack Software Engineer (AI Focus) | 4.3/5 | Evaluada | ❌ | [012](reports/012-meridianlink-2026-04-06.md) | Strong stack match (Python/React/TS/AI). Remote US. $139K-$197K. "Or equivalent experience" covers no-degree. Apply priority. |
+| 16 | 2026-04-06 | Lucid Motors | ADAS Sensor Calibration & Localization Engineer | 3.4/5 | Evaluada | ❌ | [016](reports/016-lucid-motors-2026-04-06.md) | Strong cal domain match but degree req + no C++ + relocation to Newark CA = poor overall fit |
+| 11 | 2026-04-06 | UnitedHealth | AI Solution Architect | 2.4/5 | SKIP | ❌ | [011](reports/011-unitedhealth-2026-04-06.md) | Enterprise ML/data architect role (Spark/Databricks/PyTorch/Java). Only partial match on AI agents/RAG. 80% of requirements outside Joseph's stack. |
+| 10 | 2026-04-06 | Agiloft | Forward Deployed Engineer - AI Solutions | 4.2/5 | Evaluada | ❌ | [010](reports/010-agiloft-2026-04-06.md) | Strong FDE+AI archetype match; enterprise SaaS config gap is main risk |
+| 1 | 2026-01-24 | General Matter | Test Specialist | 4.5/5 | Responded | ✅ | [001](reports/001-general-matter-2026-01-24.md) | $40-55/hr. CEO reviewed, routing to test lead. Via Alice referral. |
+| 2 | 2026-02-04 | Qualcomm | Engineering Technician | 3.5/5 | Responded | ❌ | [002](reports/002-qualcomm-2026-02-04.md) | $19.78-29.68/hr + RSUs. Recruiter screen done. No update since. |
+| 3 | 2026-02-05 | Quadient | Field Service Technician 1 | 3.0/5 | Offer | ✅ | [003](reports/003-quadient-2026-02-05.md) | HIRED $27/hr ($56K/yr). Start 2026-04-20. 3 interviews: recruiter (Nick), hiring mgr (Raymond/Javier), in-person IX5 disassembly/reassembly test (38 min). Bridge role. |
+| 4 | 2026-02-13 | Rivian | Field Service Technician | 4.0/5 | Aplicado | ✅ | [004](reports/004-rivian-2026-02-13.md) | $25.88-38.10/hr. San Diego. EV field service. |
+| 5 | 2026-02-13 | General Dynamics | Electrician II (Electro-Mechanical) | 3.5/5 | Aplicado | ✅ | [005](reports/005-gd-ordnance-2026-02-13.md) | $20-37/hr. San Diego. Defense/ITAR. Stable backup. |
+| 6 | 2026-02-16 | Zoox | Systems Test Engineer | 4.8/5 | Rejected | ✅ | [006](reports/006-zoox-2026-02-16.md) | REJECTED — degree required. Had referral to VP. |
+| 7 | 2026-03-22 | Valsoft/Fluent | AI Developer | 4.2/5 | Aplicado | ✅ |  | AI product dev. React/TypeScript/Python. Used AI Developer resume. |
+| 8 | 2026-03-24 | Tresp Law | AI App Developer | 4.0/5 | Aplicado | ✅ |  | $40-120/hr contract. Cardiff-by-the-Sea/Remote. Portfolio-focused. |
