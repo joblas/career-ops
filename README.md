@@ -32,7 +32,7 @@ Career-ops is agentic: Claude Code navigates career pages with Playwright, evalu
 
 > **Heads up: the first evaluations won't be great.** The system doesn't know you yet. Feed it context -- your CV, your career story, your proof points, your preferences, what you're good at, what you want to avoid. The more you nurture it, the better it gets. Think of it as onboarding a new recruiter: the first week they need to learn about you, then they become invaluable.
 
-Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored CVs, and land a Head of Applied AI role. [Read the full case study](https://santifer.io/career-ops-system).
+Built by [santifer](https://github.com/santifer/career-ops) and forked by Joseph Blas. [Read the full case study](https://cloudyjoe.com/career-ops-system).
 
 ## Features
 
@@ -53,7 +53,7 @@ Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/santifer/career-ops.git
+git clone https://github.com/joblas/career-ops.git
 cd career-ops && npm install
 npx playwright install chromium   # Required for PDF generation
 
@@ -202,15 +202,13 @@ career-ops/
 
 ## Also Open Source
 
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** -- The portfolio website (santifer.io) with AI chatbot, LLMOps dashboard, and case studies. If you need a portfolio to showcase alongside your job search, fork it and make it yours.
+- **[cv-joseph](https://github.com/joblas/cv-joseph)** -- Joseph's portfolio website (cloudyjoe.com) with AI chatbot, LLMOps dashboard, and case studies. Forked from [cv-santiago](https://github.com/santifer/cv-santiago).
 
-## About the Author
+## About
 
-I'm Santiago -- Head of Applied AI, former founder (built and sold a business that still runs with my name on it). I built career-ops to manage my own job search. It worked: I used it to land my current role.
+Joseph Blas -- AI Developer & AV Systems Veteran. 15+ years from building Google's self-driving car to 22-agent AI systems. Using career-ops to find roles in AI Development, DevOps/SRE, and Embedded/Robotics.
 
-My portfolio and other open source projects → [santifer.io](https://santifer.io)
-
-☕ [Buy me a coffee](https://buymeacoffee.com/santifer) if career-ops helped your job search.
+Portfolio → [cloudyjoe.com](https://cloudyjoe.com)
 
 ## Disclaimer
 
@@ -245,13 +243,13 @@ Career-Ops convierte Claude Code en un centro de mando de busqueda de empleo. En
 
 > **Aviso: las primeras evaluaciones no seran buenas.** El sistema no te conoce todavia. Dale contexto -- tu CV, tu historia profesional, tus proof points, tus preferencias, en que eres bueno, que quieres evitar. Cuanto mas lo nutras, mejor filtra. Piensa en ello como hacer onboarding a un recruiter nuevo: la primera semana necesita conocerte, luego se vuelve invaluable.
 
-Construido por alguien que lo uso para evaluar 740+ ofertas, generar 100+ CVs personalizados, y conseguir un rol de Head of Applied AI. [Lee el case study completo](https://santifer.io/career-ops).
+Originalmente creado por [santifer](https://github.com/santifer/career-ops), fork de Joseph Blas. [Lee el case study completo](https://cloudyjoe.com/career-ops-system).
 
 ## Inicio rapido
 
 ```bash
 # 1. Clonar
-git clone https://github.com/santifer/career-ops.git
+git clone https://github.com/joblas/career-ops.git
 cd career-ops && npm install
 
 # 2. Verificar setup
@@ -317,15 +315,13 @@ O simplemente pega una URL o descripcion de oferta -- career-ops la detecta y ej
 
 ## Tambien Open Source
 
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** -- El portfolio (santifer.io) con chatbot IA, dashboard LLMOps y case studies. Si necesitas un portfolio para acompañar tu busqueda de empleo, echale un vistazo.
+- **[cv-joseph](https://github.com/joblas/cv-joseph)** -- El portfolio de Joseph (cloudyjoe.com) con chatbot IA, dashboard LLMOps y case studies. Fork de [cv-santiago](https://github.com/santifer/cv-santiago).
 
 ## Documentacion
 
 - [SETUP.md](docs/SETUP.md) -- Guia de instalacion
 - [CUSTOMIZATION.md](docs/CUSTOMIZATION.md) -- Como personalizar
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) -- Como funciona el sistema
-
-☕ [Invitame a un cafe](https://buymeacoffee.com/santifer) si career-ops te ayudo en tu busqueda.
 
 ## Aviso legal
 
@@ -340,7 +336,6 @@ Ver [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) para mas detalles. Este software 
 
 ## Let's Connect
 
-[![Website](https://img.shields.io/badge/santifer.io-000?style=for-the-badge&logo=safari&logoColor=white)](https://santifer.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santifer)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hola@santifer.io)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/santifer)
+[![Website](https://img.shields.io/badge/cloudyjoe.com-000?style=for-the-badge&logo=safari&logoColor=white)](https://cloudyjoe.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/joseph-blas)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:blasj408@gmail.com)
