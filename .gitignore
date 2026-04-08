@@ -1,7 +1,14 @@
 # Personal data (user fills these)
+cv.md
+article-digest.md
+interview-prep/*.md
+!interview-prep/story-bank.md
 data/applications.md
 data/pipeline.md
 data/scan-history.tsv
+
+# Playwright session data (contains PII from browsing)
+.playwright-mcp/
 reports/*.md
 !reports/.gitkeep
 output/*
