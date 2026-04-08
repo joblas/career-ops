@@ -2,6 +2,7 @@ package screens
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -9,9 +10,9 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/santifer/career-ops/dashboard/internal/data"
-	"github.com/santifer/career-ops/dashboard/internal/model"
-	"github.com/santifer/career-ops/dashboard/internal/theme"
+	"github.com/joblas/career-ops/dashboard/internal/data"
+	"github.com/joblas/career-ops/dashboard/internal/model"
+	"github.com/joblas/career-ops/dashboard/internal/theme"
 )
 
 // PipelineClosedMsg is emitted when the pipeline screen is dismissed.
@@ -248,6 +249,13 @@ func (m PipelineModel) handleKey(msg tea.KeyMsg) (PipelineModel, tea.Cmd) {
 	case "enter":
 		if app, ok := m.CurrentApp(); ok && app.ReportPath != "" {
 			fullPath := filepath.Join(m.careerOpsPath, app.ReportPath)
+			// Fallback: if careerOpsPath points to data/ subdir, try parent
+			if _, err := os.Stat(fullPath); err != nil {
+				parentPath := filepath.Join(m.careerOpsPath, "..", app.ReportPath)
+				if _, err2 := os.Stat(parentPath); err2 == nil {
+					fullPath = parentPath
+				}
+			}
 			title := fmt.Sprintf("%s \u2014 %s", app.Company, app.Role)
 			jobURL := app.JobURL
 			return m, func() tea.Msg {
@@ -760,7 +768,7 @@ func (m PipelineModel) renderHelp() string {
 				keyStyle.Render("Esc") + descStyle.Render(" cancel"))
 	}
 
-	brand := lipgloss.NewStyle().Foreground(m.theme.Overlay).Render("career-ops by santifer.io")
+	brand := lipgloss.NewStyle().Foreground(m.theme.Overlay).Render("career-ops by cloudyjoe.com")
 
 	keys := keyStyle.Render("↑↓") + descStyle.Render(" nav  ") +
 		keyStyle.Render("←→") + descStyle.Render(" tabs  ") +

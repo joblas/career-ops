@@ -8,18 +8,18 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/santifer/career-ops/dashboard/internal/model"
+	"github.com/joblas/career-ops/dashboard/internal/model"
 )
 
 var (
 	reReportLink     = regexp.MustCompile(`\[(\d+)\]\(([^)]+)\)`)
 	reScoreValue     = regexp.MustCompile(`(\d+\.?\d*)/5`)
-	reArchetype      = regexp.MustCompile(`(?i)\*\*Arquetipo(?:\s+detectado)?\*\*\s*\|\s*(.+)`)
-	reTlDr           = regexp.MustCompile(`(?i)\*\*TL;DR\*\*\s*\|\s*(.+)`)
+	reArchetype      = regexp.MustCompile(`(?i)\*{0,2}(?:Arquetipo|Archetype)(?:\s+detectado)?\*{0,2}\s*\|\s*(.+)`)
+	reTlDr           = regexp.MustCompile(`(?i)\*{0,2}TL;DR\*{0,2}\s*\|\s*(.+)`)
 	reTlDrColon      = regexp.MustCompile(`(?i)\*\*TL;DR:\*\*\s*(.+)`)
-	reRemote         = regexp.MustCompile(`(?i)\*\*Remote\*\*\s*\|\s*(.+)`)
-	reComp           = regexp.MustCompile(`(?i)\*\*Comp\*\*\s*\|\s*(.+)`)
-	reArchetypeColon = regexp.MustCompile(`(?i)\*\*Arquetipo:\*\*\s*(.+)`)
+	reRemote         = regexp.MustCompile(`(?i)\*{0,2}Remote\*{0,2}\s*\|\s*(.+)`)
+	reComp           = regexp.MustCompile(`(?i)\*{0,2}Comp(?:\s*\(posted\))?\*{0,2}\s*\|\s*(.+)`)
+	reArchetypeColon = regexp.MustCompile(`(?i)\*\*(?:Arquetipo|Archetype):\*\*\s*(.+)`)
 	reReportURL      = regexp.MustCompile(`(?m)^\*\*URL:\*\*\s*(https?://\S+)`)
 	reBatchID        = regexp.MustCompile(`(?m)^\*\*Batch ID:\*\*\s*(\d+)`)
 )
@@ -120,7 +120,12 @@ func ParseApplications(careerOpsPath string) []model.CareerApplication {
 		fullReport := filepath.Join(careerOpsPath, apps[i].ReportPath)
 		reportContent, err := os.ReadFile(fullReport)
 		if err != nil {
-			continue
+			// Fallback: if careerOpsPath points to data/ subdir, try parent
+			fullReport = filepath.Join(careerOpsPath, "..", apps[i].ReportPath)
+			reportContent, err = os.ReadFile(fullReport)
+			if err != nil {
+				continue
+			}
 		}
 		header := string(reportContent)
 		// Only scan the header (first 1000 bytes) for speed
@@ -502,7 +507,12 @@ func LoadReportSummary(careerOpsPath, reportPath string) (archetype, tldr, remot
 	fullPath := filepath.Join(careerOpsPath, reportPath)
 	content, err := os.ReadFile(fullPath)
 	if err != nil {
-		return
+		// Fallback: try parent directory (if careerOpsPath is data/ subdir)
+		fullPath = filepath.Join(careerOpsPath, "..", reportPath)
+		content, err = os.ReadFile(fullPath)
+		if err != nil {
+			return
+		}
 	}
 	text := string(content)
 
